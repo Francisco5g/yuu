@@ -64,7 +64,7 @@ const Home: NextPage = () => {
 
       <main className="w-full flex justify-center md:justify-between flex-wrap md:px-8 lg:px-20">
         <div className="my-4">
-          <figure className="relative w-72 md:w-[335px] lg:w-[400px] md:h-60">
+          <figure className="relative w-72 md:w-[335px] lg:w-[400px] h-48 md:h-60">
             <Image src="/bg-images/gif1.gif" objectFit="cover" layout="fill" alt="Background image" priority />
           </figure>
         </div>
