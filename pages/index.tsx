@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           </div>
 
           <div>
-            <Link passHref href="https://github.com/Francisco5g">
+            <Link passHref href="https://github.com/Francisco5g/yuu">
               <a>
                 <Icon icon="akar-icons:github-fill" className="duration-200 text-gray hover:text-black" fontSize={24} />
               </a>
