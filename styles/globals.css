@@ -31,12 +31,8 @@
     @apply text-[14px]
   }
 
-  a, span, p, input {
-    @apply text-gray;
-  }
-
-  span, p {
-    @apply text-[14px];
+  a, span, p, input, strong {
+    @apply text-gray text-[14px];
   }
 
   strong {
