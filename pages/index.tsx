@@ -35,7 +35,14 @@ const Home: NextPage = () => {
         <div className="flex flex-col items-center">
           <div>
             <figure className="relative w-24 h-24 ">
-              <Image className="rounded-full" src="/user-avatar.jpg" objectFit="cover" layout="fill" alt="Avatar" />
+              <Image
+                className="rounded-full"
+                src="/user-avatar.jpg"
+                objectFit="cover"
+                layout="fill"
+                alt="Avatar"
+                priority
+              />
             </figure>
           </div>
 
@@ -58,22 +65,22 @@ const Home: NextPage = () => {
       <main className="w-full flex justify-center md:justify-between flex-wrap md:px-8 lg:px-20">
         <div className="my-4">
           <figure className="relative w-72 md:w-[335px] lg:w-[400px] md:h-60">
-            <Image src="/bg-images/gif1.gif" objectFit="cover" layout="fill" alt="Background image" />
+            <Image src="/bg-images/gif1.gif" objectFit="cover" layout="fill" alt="Background image" priority />
           </figure>
         </div>
         <div className="my-4">
           <figure className="relative w-72 md:w-[335px] lg:w-[400px] h-48 md:h-60">
-            <Image src="/bg-images/gif2.gif" objectFit="cover" layout="fill" alt="Background image" />
+            <Image src="/bg-images/gif2.gif" objectFit="cover" layout="fill" alt="Background image" priority />
           </figure>
         </div>
         <div className="my-4">
           <figure className="relative w-72 md:w-[335px] lg:w-[400px] h-48 md:h-60">
-            <Image src="/bg-images/gif3.gif" objectFit="cover" layout="fill" alt="Background image" />
+            <Image src="/bg-images/gif3.gif" objectFit="cover" layout="fill" alt="Background image" priority />
           </figure>
         </div>
         <div className="my-4">
           <figure className="relative w-72 md:w-[335px] lg:w-[400px] h-48 md:h-60">
-            <Image src="/bg-images/gif4.gif" objectFit="cover" layout="fill" alt="Background image" />
+            <Image src="/bg-images/gif4.gif" objectFit="cover" layout="fill" alt="Background image" priority />
           </figure>
         </div>
       </main>
