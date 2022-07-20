@@ -1,0 +1,15 @@
+{
+  "songs": [
+    {
+      "thumb":"", 
+      "title":"Grand Escape", 
+      "url":"https://firebasestorage.googleapis.com/v0/b/yuu1-64a9a.appspot.com/o/songs%2FGrand%20Escape%20A%20Weathering%20With%20You%20AMV.mp3?alt=media&amp;token=cdd4eb7c-00b0-48fd-931b-13e94c10526c",
+      "author":"Radwimps"
+    }, {
+      "title":"Kawaki wo Ameku", 
+      "url":"https://firebasestorage.googleapis.com/v0/b/yuu1-64a9a.appspot.com/o/songs%2FMinami%20-%20Kawaki%20wo%20Ameku.mp3?alt=media&token=bf03d099-f042-4b21-8e0d-261cb79a2244",
+      "author":"Minami",
+      "thumb":"https://i.scdn.co/image/ab67616d00001e02e192db03c0db78e0eead6114"
+    }
+  ]
+}

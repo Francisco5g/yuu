@@ -22,8 +22,9 @@ const Home: NextPage = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Background image"
-                priority
                 draggable="false"
+                placeholder="blur"
+                blurDataURL="/user-avatar.jpg"
               />
             </figure>
           </div>

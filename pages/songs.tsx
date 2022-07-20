@@ -4,8 +4,8 @@ import Head from "next/head";
 
 import { Icon } from "@iconify/react";
 
-import { collection, getDocs } from "firebase/firestore";
-import { firestore } from "../lib/firebase/firestore";
+import { songs as songsData } from "../data/songs.json";
+
 import { usePlayerContext } from "../context/playerContext";
 
 interface Props {
@@ -20,17 +20,6 @@ const SongsPage: NextPage<Props> = (props) => {
   useEffect(() => {
     setSongs(props.songs);
   }, [props.songs]);
-
-  // function handlePlay(song: Song) {
-  //   if (playerRef.current) {
-  //     const audio = playerRef.current;
-
-  //     audio.src = song.url;
-  //     audio.play();
-
-  //     logger(`Starting play "${song.title}"`, { type: "info" });
-  //   }
-  // }
 
   return (
     <>
@@ -57,23 +46,7 @@ const SongsPage: NextPage<Props> = (props) => {
 
 export default SongsPage;
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  // const songsRef = ref(storage, "/songs");
-  // const songsRefContent = await listAll(songsRef);
-
-  // const songs = await Promise.all(
-  //   songsRefContent.items.map(async (item) => {
-  //     const songRef = ref(storage, item.fullPath);
-
-  //     return await getDownloadURL(songRef);
-  //   })
-  // );
-
-  const songsCollection = collection(firestore, "songs");
-  const songsDocument = await getDocs(songsCollection);
-
-  const songsData = songsDocument.docs.map((song) => song.data());
-
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       songs: songsData,

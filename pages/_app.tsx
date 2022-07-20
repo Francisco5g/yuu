@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
 
-        <MusicPlayer />
+        {/* <MusicPlayer /> */}
       </PlayerContextProvider>
     </LoggerContextProvider>
   );

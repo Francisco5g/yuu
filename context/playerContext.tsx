@@ -3,6 +3,8 @@ import { useLoggerContext } from "./loggerContext";
 
 interface PlayerContextValus {
   play(song: Song): void;
+  currentSong: Song | null;
+  playing: boolean;
 }
 
 const PlayerContext = createContext<PlayerContextValus>({} as PlayerContextValus);
@@ -12,6 +14,9 @@ interface Props {
 }
 
 export function PlayerContextProvider(props: Props) {
+  const [currentSong, setCurrentSong] = useState<Song | null>(null);
+  const [playing, setPlaying] = useState(false);
+
   const { logger } = useLoggerContext();
 
   const playerRef = useRef<HTMLAudioElement>(null);
@@ -19,8 +24,15 @@ export function PlayerContextProvider(props: Props) {
   function play(song: Song) {
     logger(`Starting playing ${song.title}`, { type: "info" });
 
+    if (song.title === currentSong?.title) {
+      return;
+    }
+
     if (playerRef.current) {
       const audio = playerRef.current;
+
+      setCurrentSong(song);
+      setPlaying(true);
 
       audio.src = song.url;
       audio.play();
@@ -29,6 +41,8 @@ export function PlayerContextProvider(props: Props) {
 
   const value: PlayerContextValus = {
     play,
+    currentSong,
+    playing,
   };
 
   return (
